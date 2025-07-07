@@ -1,66 +1,61 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #e0f2f1, #ffffff);
+  font-family: sans-serif;
+  background: #f1f1f1;
   text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  color: #00796b;
+  padding: 2rem;
 }
 
 form {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
   max-width: 400px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-input {
+input, button {
   display: block;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
   width: 90%;
-  padding: 10px;
-  margin: 10px auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 15px;
-  margin: 10px 5px;
-  background-color: #00796b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #004d40;
 }
 
 ul#clientList {
   list-style: none;
   padding: 0;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
-li {
-  background: #f5f5f5;
-  margin: 10px;
-  padding: 15px;
+li.client-card {
+  background: #ffffff;
+  margin: 1rem 0;
   border-radius: 8px;
-  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-.client-actions button {
-  background-color: #ffa000;
+.client-name {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.client-actions button:hover {
-  background-color: #ef6c00;
+.client-details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.client-card:hover {
+  background: #e0f7fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.client-card:hover .client-details {
+  opacity: 1;
+  max-height: 200px;
 }
