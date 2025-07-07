@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Πελατολόγιο με Google Σύνδεση</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <style>
+    .client-card {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .client-details {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+    .client-card:hover .client-details {
+      opacity: 1;
+      max-height: 200px;
+    }
+    .client-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #00796b;
+      cursor: pointer;
+    }
+    .client-card {
+      background: #e0f7fa;
+    }
+    .client-card:hover {
+      background: #b2ebf2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <h1>Πελατολόγιο</h1>
+  <button id="loginBtn">Σύνδεση με Google</button>
+  <button id="logoutBtn" style="display:none;">Αποσύνδεση</button>
+
+  <form id="clientForm" style="display:none;">
+    <input type="text" name="name" placeholder="Όνομα" required />
+    <input type="text" name="surname" placeholder="Επώνυμο" required />
+    <input type="number" name="debt" placeholder="Οφειλή (€)" required />
+    <input type="tel" name="phone" placeholder="Τηλέφωνο" required />
+    <button type="submit">Καταχώριση</button>
+  </form>
+
+  <form id="editForm" style="display:none;">
+    <input type="text" name="name" placeholder="Όνομα" required />
+    <input type="text" name="surname" placeholder="Επώνυμο" required />
+    <input type="number" name="debt" placeholder="Οφειλή (€)" required />
+    <input type="tel" name="phone" placeholder="Τηλέφωνο" required />
+    <button type="submit">Αποθήκευση</button>
+    <button type="button" id="cancelEdit">Άκυρο</button>
+  </form>
+
+  <ul id="clientList"></ul>
+
+  <script src="main.js"></script>
+</body>
+</html>

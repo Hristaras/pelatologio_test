@@ -1,0 +1,66 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0f2f1, #ffffff);
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #00796b;
+}
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+ul#clientList {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  background: #f5f5f5;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.client-actions button {
+  background-color: #ffa000;
+}
+
+.client-actions button:hover {
+  background-color: #ef6c00;
+}
